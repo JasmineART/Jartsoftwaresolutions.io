@@ -115,6 +115,8 @@
       '.about__cards',
       '.process__steps',
       '.faq__list',
+      '.service-area__grid',
+      '.aoai__features',
     ];
     staggerContainers.forEach(selector => {
       $$(selector + ' .reveal').forEach((el, i) => {
