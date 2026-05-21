@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="JART Software Solutions Security Policy — our technical and organizational security controls, compliance frameworks, and vulnerability disclosure program." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://jartsoftwaresolutions.com/security-policy.html" />
+  <title>Security Policy | JART Software Solutions</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Syne:wght@600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <header class="header" id="header">
+    <nav class="nav container" aria-label="Main navigation">
+      <a href="index.html" class="nav__logo" aria-label="JART Software Solutions home">
+        <svg class="nav__logo-svg" width="30" height="24" viewBox="0 0 30 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <defs><linearGradient id="lg-sp-nav" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#6366f1"/><stop offset="100%" stop-color="#06b6d4"/></linearGradient></defs>
+          <rect x="2" y="0.5" width="26" height="17" rx="2" fill="url(#lg-sp-nav)"/>
+          <rect x="4" y="2.5" width="22" height="13" rx="1" fill="#030b18"/>
+          <rect x="6.5" y="5.5" width="8" height="1.5" rx="0.75" fill="#818cf8" opacity="0.85"/>
+          <rect x="6.5" y="8.5" width="13" height="1.5" rx="0.75" fill="#22d3ee" opacity="0.65"/>
+          <rect x="6.5" y="11.5" width="5" height="1.5" rx="0.75" fill="#818cf8" opacity="0.5"/>
+          <rect x="10" y="17.5" width="10" height="1.5" rx="0.75" fill="url(#lg-sp-nav)" opacity="0.55"/>
+          <rect x="0" y="19" width="30" height="4" rx="2" fill="url(#lg-sp-nav)" opacity="0.9"/>
+          <rect x="11" y="20" width="8" height="2" rx="1" fill="rgba(255,255,255,0.2)"/>
+        </svg>
+        JART<span class="nav__logo-accent"> Software</span>
+      </a>
+      <ul class="nav__links" id="navLinks" role="list">
+        <li><a href="index.html#about"    class="nav__link">About</a></li>
+        <li><a href="index.html#services" class="nav__link">Services</a></li>
+        <li><a href="index.html#why-us"   class="nav__link">Why JART</a></li>
+        <li><a href="index.html#process"  class="nav__link">Process</a></li>
+        <li><a href="index.html#contact"  class="nav__link nav__link--cta">Get Started</a></li>
+      </ul>
+      <button class="nav__toggle" id="navToggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="navLinks">
+        <span class="nav__toggle-bar"></span>
+        <span class="nav__toggle-bar"></span>
+        <span class="nav__toggle-bar"></span>
+      </button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="legal-hero">
+      <div class="container">
+        <nav class="legal-breadcrumb" aria-label="Breadcrumb">
+          <a href="index.html">Home</a>
+          <span class="legal-breadcrumb__sep" aria-hidden="true">›</span>
+          <span aria-current="page">Security Policy</span>
+        </nav>
+        <h1 class="legal-hero__title">Security Policy</h1>
+        <div class="legal-hero__meta">
+          <span><strong>Effective Date:</strong> May 21, 2026</span>
+          <span><strong>Last Updated:</strong> May 21, 2026</span>
+          <span><strong>Framework:</strong> NIST CSF 2.0 / ISO/IEC 27001 Aligned</span>
+        </div>
+      </div>
+    </section>
+
+    <div class="legal-body">
+      <div class="container">
+        <div class="legal-layout">
+
+          <aside class="legal-toc" aria-label="Table of contents">
+            <p class="legal-toc__title">Contents</p>
+            <ul class="legal-toc__list" role="list">
+              <li><a href="#commitment"       class="legal-toc__link">1. Our Commitment</a></li>
+              <li><a href="#framework"        class="legal-toc__link">2. Security Framework</a></li>
+              <li><a href="#data-protection"  class="legal-toc__link">3. Data Protection</a></li>
+              <li><a href="#access-control"   class="legal-toc__link">4. Access Control</a></li>
+              <li><a href="#app-security"     class="legal-toc__link">5. Application Security</a></li>
+              <li><a href="#infrastructure"   class="legal-toc__link">6. Infrastructure Security</a></li>
+              <li><a href="#vuln-mgmt"        class="legal-toc__link">7. Vulnerability Management</a></li>
+              <li><a href="#incident-response" class="legal-toc__link">8. Incident Response</a></li>
+              <li><a href="#vendor-security"  class="legal-toc__link">9. Vendor Security</a></li>
+              <li><a href="#personnel"        class="legal-toc__link">10. Personnel Security</a></li>
+              <li><a href="#data-class"       class="legal-toc__link">11. Data Classification</a></li>
+              <li><a href="#compliance-frameworks" class="legal-toc__link">12. Compliance Frameworks</a></li>
+              <li><a href="#disclosure"       class="legal-toc__link">13. Vulnerability Disclosure</a></li>
+              <li><a href="#contact-security" class="legal-toc__link">14. Security Contact</a></li>
+            </ul>
+          </aside>
+
+          <div class="legal-content">
+
+            <div class="legal-note">
+              <p>JART Software Solutions is committed to maintaining the highest standards of information security across all aspects of our operations — from internal systems to client deliverables. This policy describes our security posture, controls, and practices. It is reviewed and updated at least annually.</p>
+            </div>
+
+            <h2 id="commitment">1. Our Security Commitment</h2>
+            <p>Security is not a feature at JART Software Solutions — it is a foundational principle. Every solution we architect, every system we build, and every service we deliver is designed with security as a first-order concern. We apply the principle of <strong>security by design and by default</strong>, ensuring that the most privacy-protective and security-preserving settings are active from day one.</p>
+            <p>Our security program is aligned with industry-recognized frameworks and standards to protect:</p>
+            <ul>
+              <li>Client data, systems, and intellectual property</li>
+              <li>The confidentiality, integrity, and availability of all information assets</li>
+              <li>The privacy rights of all individuals whose data we process</li>
+              <li>The operational continuity of our clients' businesses</li>
+            </ul>
+
+            <h2 id="framework">2. Security Framework</h2>
+            <p>Our information security management system is aligned with the <strong>NIST Cybersecurity Framework (CSF) 2.0</strong> and references <strong>ISO/IEC 27001:2022</strong> as a guiding standard. We organize security controls across six NIST CSF core functions:</p>
+            <div class="legal-table-wrap">
+              <table class="legal-table">
+                <thead>
+                  <tr>
+                    <th>NIST CSF Function</th>
+                    <th>Description</th>
+                    <th>Key Activities</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong>Govern</strong></td>
+                    <td>Establish and monitor the organization's cybersecurity risk strategy and policies</td>
+                    <td>Risk governance, policy management, roles &amp; responsibilities</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Identify</strong></td>
+                    <td>Develop an understanding of assets, risks, and vulnerabilities</td>
+                    <td>Asset inventory, risk assessments, threat modeling</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Protect</strong></td>
+                    <td>Implement safeguards to ensure delivery of critical services</td>
+                    <td>Encryption, access control, secure development, awareness training</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Detect</strong></td>
+                    <td>Implement activities to identify cybersecurity events</td>
+                    <td>Monitoring, anomaly detection, log analysis, alerting</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Respond</strong></td>
+                    <td>Take action regarding a detected cybersecurity incident</td>
+                    <td>Incident response plan, communication, containment, eradication</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Recover</strong></td>
+                    <td>Maintain resilience and restore capabilities after an incident</td>
+                    <td>Recovery planning, backups, post-incident review</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <h2 id="data-protection">3. Data Protection and Encryption</h2>
+            <h3>3.1 Data in Transit</h3>
+            <p>All data transmitted between clients, our systems, and third-party services is encrypted using <strong>TLS 1.3</strong> (minimum TLS 1.2 where legacy compatibility requires it). We enforce HTTPS with HTTP Strict Transport Security (HSTS) on all web properties. Weak cipher suites and deprecated protocols (TLS 1.0/1.1, SSLv3) are disabled.</p>
+
+            <h3>3.2 Data at Rest</h3>
+            <p>Sensitive data stored on our systems and in our delivered solutions is encrypted using <strong>AES-256</strong> encryption. Database encryption (transparent data encryption) is applied to all production databases containing personal or confidential data. Backup data is encrypted with equivalent strength.</p>
+
+            <h3>3.3 Key Management</h3>
+            <p>Encryption keys are managed using hardware security modules (HSMs) or equivalent cloud key management services. Keys are rotated on a defined schedule, and access to key material is strictly controlled and audited. Key rotation events are logged and reviewed.</p>
+
+            <h3>3.4 End-to-End Encryption</h3>
+            <p>For client engagements handling highly sensitive data (healthcare, financial, or similarly regulated data), we implement end-to-end encryption architectures ensuring that data is protected even from the infrastructure layer.</p>
+
+            <h2 id="access-control">4. Access Control</h2>
+            <p>Our access control framework is built on three core principles: <strong>least privilege, need-to-know, and zero-trust</strong>.</p>
+
+            <h3>4.1 Authentication</h3>
+            <ul>
+              <li><strong>Multi-Factor Authentication (MFA)</strong> is mandatory for all internal systems, developer tools, cloud consoles, and client-facing portals</li>
+              <li>Passwords must meet complexity requirements (minimum 16 characters, not reused from previous 12 passwords) and are stored only as salted cryptographic hashes (bcrypt/Argon2)</li>
+              <li>Single Sign-On (SSO) with SAML 2.0 or OIDC is used where technically feasible to reduce credential sprawl</li>
+              <li>Authentication attempts are rate-limited and anomalous login events trigger automated alerts</li>
+            </ul>
+
+            <h3>4.2 Authorization (Role-Based Access Control)</h3>
+            <ul>
+              <li>Access to all systems is governed by Role-Based Access Control (RBAC). Users are granted only the minimum permissions required to perform their job function</li>
+              <li>Privileged access (administrative/root) requires additional approval, is time-limited, and every action is logged</li>
+              <li>Access rights are reviewed quarterly and upon any change in personnel role</li>
+              <li>Terminated employee or contractor access is revoked within 24 hours of departure</li>
+            </ul>
+
+            <h3>4.3 Zero-Trust Architecture</h3>
+            <p>We apply zero-trust principles: no user or system is implicitly trusted based on network location. Every request is authenticated, authorized, and encrypted regardless of whether it originates from inside or outside our network perimeter. Micro-segmentation is applied to limit lateral movement in the event of a breach.</p>
+
+            <h2 id="app-security">5. Application Security</h2>
+            <p>We build security into every phase of our Software Development Lifecycle (SDLC) following the <strong>OWASP (Open Worldwide Application Security Project)</strong> standards.</p>
+
+            <h3>5.1 Secure Development Practices</h3>
+            <ul>
+              <li>All developers are trained in secure coding practices, with mandatory annual refreshers</li>
+              <li>OWASP Top 10 and OWASP Application Security Verification Standard (ASVS) are referenced as baselines for all web applications</li>
+              <li>Threat modeling (using STRIDE) is performed for all new systems and significant architectural changes</li>
+              <li>Code review is mandatory for all changes before merging to main branches; security-critical changes require review by a senior security-aware engineer</li>
+            </ul>
+
+            <h3>5.2 Static and Dynamic Analysis</h3>
+            <ul>
+              <li><strong>Static Application Security Testing (SAST)</strong> is integrated into CI/CD pipelines and runs on every code commit</li>
+              <li><strong>Dynamic Application Security Testing (DAST)</strong> is performed on staging environments prior to major releases</li>
+              <li><strong>Software Composition Analysis (SCA)</strong> continuously monitors all open-source dependencies for known vulnerabilities (CVEs) using industry tooling</li>
+              <li>Critical and high-severity findings in automated scans block deployment until resolved</li>
+            </ul>
+
+            <h3>5.3 Security Testing</h3>
+            <p>All production systems undergo at minimum an annual third-party penetration test. Applications handling sensitive data (healthcare, financial, PII) receive penetration testing prior to production deployment. Findings are remediated within defined SLAs based on severity:</p>
+            <div class="legal-table-wrap">
+              <table class="legal-table">
+                <thead>
+                  <tr><th>Severity</th><th>CVSS Score</th><th>Remediation SLA</th></tr>
+                </thead>
+                <tbody>
+                  <tr><td>Critical</td><td>9.0–10.0</td><td>24 hours (emergency patch)</td></tr>
+                  <tr><td>High</td><td>7.0–8.9</td><td>7 days</td></tr>
+                  <tr><td>Medium</td><td>4.0–6.9</td><td>30 days</td></tr>
+                  <tr><td>Low</td><td>0.1–3.9</td><td>90 days</td></tr>
+                </tbody>
+              </table>
+            </div>
+
+            <h2 id="infrastructure">6. Infrastructure Security</h2>
+            <h3>6.1 Cloud Security</h3>
+            <p>Cloud infrastructure is configured following Center for Internet Security (CIS) Benchmarks for the relevant platform. Infrastructure-as-Code (IaC) templates are security-scanned before deployment. Cloud environments use separate accounts/projects for development, staging, and production environments (environment isolation).</p>
+
+            <h3>6.2 Network Security</h3>
+            <ul>
+              <li>Web Application Firewall (WAF) is deployed for all internet-facing applications to protect against OWASP Top 10 attacks</li>
+              <li>DDoS protection is implemented at the network edge</li>
+              <li>Network traffic is monitored using intrusion detection systems (IDS/IPS)</li>
+              <li>All unnecessary ports and services are disabled; network rules follow a default-deny posture</li>
+            </ul>
+
+            <h3>6.3 Endpoint Security</h3>
+            <ul>
+              <li>All company-managed endpoints use full-disk encryption (FileVault / BitLocker)</li>
+              <li>Endpoint Detection and Response (EDR) software is deployed on all devices with access to client data</li>
+              <li>Automated patch management ensures operating system and application patches are applied within defined SLAs</li>
+              <li>BYOD (bring your own device) access to sensitive systems is restricted or prohibited</li>
+            </ul>
+
+            <h2 id="vuln-mgmt">7. Vulnerability Management</h2>
+            <p>Our vulnerability management program follows a continuous cycle of discovery, prioritization, remediation, and verification:</p>
+            <ul>
+              <li><strong>Asset inventory:</strong> All IT assets are catalogued and classified by risk level</li>
+              <li><strong>Continuous scanning:</strong> Automated vulnerability scans run weekly against all in-scope systems</li>
+              <li><strong>CVE monitoring:</strong> We subscribe to NVD (National Vulnerability Database), CISA KEV (Known Exploited Vulnerabilities), and vendor security advisories</li>
+              <li><strong>Patch management:</strong> Critical security patches are evaluated within 24 hours of release; deployment timelines follow the severity-based SLAs above</li>
+              <li><strong>Compensating controls:</strong> Where immediate patching is not feasible, risk-accepted compensating controls are documented and reviewed by management</li>
+            </ul>
+
+            <h2 id="incident-response">8. Incident Response</h2>
+            <p>Our incident response plan follows <strong>NIST SP 800-61 Rev. 2</strong> (Computer Security Incident Handling Guide), covering Preparation, Detection &amp; Analysis, Containment, Eradication, Recovery, and Post-Incident Activity.</p>
+
+            <h3>8.1 Response Phases</h3>
+            <ul>
+              <li><strong>Preparation:</strong> Documented IR plan, defined roles, tested runbooks, communication templates</li>
+              <li><strong>Detection:</strong> 24/7 automated monitoring and alerting; all security events are logged to a centralized SIEM</li>
+              <li><strong>Containment:</strong> Isolate affected systems within 1 hour of confirmed incident declaration</li>
+              <li><strong>Eradication:</strong> Remove threat actor access and root cause; verify clean state before recovery</li>
+              <li><strong>Recovery:</strong> Restore systems from verified clean backups; monitor for reinfection</li>
+              <li><strong>Post-Incident:</strong> Root cause analysis, lessons learned, policy and control updates within 30 days</li>
+            </ul>
+
+            <h3>8.2 Breach Notification</h3>
+            <p>In the event of a confirmed personal data breach:</p>
+            <ul>
+              <li>Affected clients are notified within <strong>24 hours</strong> of confirmation with preliminary details</li>
+              <li>GDPR supervisory authority notification is made within <strong>72 hours</strong> where required (GDPR Art. 33)</li>
+              <li>Affected individuals are notified without undue delay where the breach poses a high risk to their rights and freedoms (GDPR Art. 34)</li>
+              <li>HIPAA-covered incidents follow the HIPAA Breach Notification Rule (45 CFR §§ 164.400-414)</li>
+            </ul>
+
+            <h2 id="vendor-security">9. Third-Party and Vendor Security</h2>
+            <p>We apply rigorous security requirements to all third-party vendors and sub-processors that access our systems or process data on our behalf:</p>
+            <ul>
+              <li>All vendors handling personal data sign a <strong>Data Processing Agreement (DPA)</strong> prior to being granted access</li>
+              <li>Critical vendors undergo security questionnaire review aligned with the <strong>Shared Assessments SIG</strong> (Standardized Information Gathering) questionnaire</li>
+              <li>Vendors are reviewed annually, and high-risk vendors may be subject to on-site or remote audits</li>
+              <li>Vendor access to our systems is granted on a least-privilege basis and monitored</li>
+              <li>We maintain a list of authorized sub-processors and notify clients of material changes with adequate notice</li>
+            </ul>
+
+            <h2 id="personnel">10. Personnel Security</h2>
+            <ul>
+              <li><strong>Background screening:</strong> All personnel with access to client data undergo background verification appropriate to the sensitivity of their role</li>
+              <li><strong>Security awareness training:</strong> All personnel complete security awareness training upon onboarding and annually thereafter, covering phishing, social engineering, incident reporting, and acceptable use</li>
+              <li><strong>Acceptable use policy:</strong> All personnel sign and adhere to our Acceptable Use Policy governing the use of company and client systems</li>
+              <li><strong>Confidentiality agreements:</strong> All personnel and contractors sign confidentiality agreements before accessing any client or proprietary information</li>
+              <li><strong>Security champions:</strong> Designated security champions in each project team are responsible for promoting secure development practices</li>
+            </ul>
+
+            <h2 id="data-class">11. Data Classification</h2>
+            <p>All information assets handled by JART are classified according to the following scheme, which governs storage, transmission, access, and disposal requirements:</p>
+            <div class="legal-table-wrap">
+              <table class="legal-table">
+                <thead>
+                  <tr><th>Classification</th><th>Description</th><th>Examples</th><th>Controls</th></tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong>Public</strong></td>
+                    <td>Intended for public disclosure</td>
+                    <td>Website content, marketing materials, published case studies</td>
+                    <td>Standard web security; no special controls</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Internal</strong></td>
+                    <td>Internal use only; not for public distribution</td>
+                    <td>Internal processes, tooling, non-sensitive communications</td>
+                    <td>Access limited to JART personnel; no external sharing without approval</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Confidential</strong></td>
+                    <td>Sensitive business or client information</td>
+                    <td>Client project data, contracts, source code, PII</td>
+                    <td>Encryption at rest and in transit; MFA; access logging; DPA required for processing</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Restricted</strong></td>
+                    <td>Highly sensitive; regulatory or legal protection required</td>
+                    <td>PHI (HIPAA), financial account data, security credentials, cryptographic keys</td>
+                    <td>Strictest controls; HSM key management; segregated environments; mandatory breach notification procedures</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <h2 id="compliance-frameworks">12. Compliance Frameworks</h2>
+            <p>Our security program is designed to align with and satisfy the requirements of the following regulatory and industry standards:</p>
+            <div class="framework-badges">
+              <span class="framework-badge framework-badge--blue">NIST CSF 2.0</span>
+              <span class="framework-badge framework-badge--blue">ISO/IEC 27001:2022</span>
+              <span class="framework-badge framework-badge--cyan">GDPR (EU 2016/679)</span>
+              <span class="framework-badge framework-badge--cyan">CCPA / CPRA</span>
+              <span class="framework-badge framework-badge--gold">HIPAA / HITECH</span>
+              <span class="framework-badge framework-badge--gold">SOC 2 Type II (aligned)</span>
+              <span class="framework-badge framework-badge--blue">OWASP ASVS</span>
+              <span class="framework-badge framework-badge--cyan">CIS Controls v8</span>
+              <span class="framework-badge framework-badge--gold">NIST SP 800-53</span>
+            </div>
+            <p>Clients in regulated industries (healthcare, financial services, government contracting) may request documentation of specific control implementations to satisfy their own compliance obligations.</p>
+
+            <h2 id="disclosure">13. Responsible Vulnerability Disclosure</h2>
+            <p>JART Software Solutions encourages the responsible disclosure of security vulnerabilities affecting our systems or our clients' systems. We are committed to working with security researchers in good faith.</p>
+
+            <h3>13.1 Scope</h3>
+            <p>In-scope for disclosure reports: this website (jartsoftwaresolutions.com) and production systems directly operated by JART Software Solutions.</p>
+            <p>Out-of-scope: third-party services (GitHub Pages, etc.), denial-of-service attacks, social engineering of JART personnel, and physical security attacks.</p>
+
+            <h3>13.2 Disclosure Process</h3>
+            <ol>
+              <li>Submit your report via email to <a href="mailto:security@jartsoftwaresolutions.com">security@jartsoftwaresolutions.com</a></li>
+              <li>Include a clear description of the vulnerability, steps to reproduce, potential impact, and any proof-of-concept</li>
+              <li>We will acknowledge receipt within <strong>2 business days</strong></li>
+              <li>We will confirm the vulnerability and provide an initial severity assessment within <strong>10 business days</strong></li>
+              <li>We will remediate confirmed vulnerabilities within the SLA timelines defined in Section 5.3</li>
+              <li>We ask that you do not disclose the vulnerability publicly until we have issued a fix, or until <strong>90 days</strong> have elapsed since submission (whichever comes first)</li>
+            </ol>
+
+            <h3>13.3 Safe Harbor</h3>
+            <p>We will not pursue legal action against researchers who discover and report vulnerabilities in good faith, provided they do not access or modify data beyond what is necessary to demonstrate the vulnerability, and do not conduct attacks that could harm the availability or integrity of our systems.</p>
+
+            <h2 id="contact-security">14. Security Contact</h2>
+            <div class="legal-contact-box">
+              <h3>Report a Security Issue</h3>
+              <p><strong>Email:</strong> <a href="mailto:security@jartsoftwaresolutions.com">security@jartsoftwaresolutions.com</a></p>
+              <p><strong>For urgent incidents involving client data:</strong> Include "URGENT — DATA INCIDENT" in the subject line for expedited response.</p>
+              <p><strong>PGP key:</strong> Available upon request for sensitive disclosures.</p>
+              <p>For general security questions or compliance documentation requests, contact <a href="mailto:hello@jartsoftwaresolutions.com">hello@jartsoftwaresolutions.com</a>.</p>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer" aria-label="Site footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <a href="index.html" class="nav__logo footer__logo" aria-label="JART Software Solutions home">
+            <svg class="nav__logo-svg" width="30" height="24" viewBox="0 0 30 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <defs><linearGradient id="lg-sp-footer" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#6366f1"/><stop offset="100%" stop-color="#06b6d4"/></linearGradient></defs>
+              <rect x="2" y="0.5" width="26" height="17" rx="2" fill="url(#lg-sp-footer)"/>
+              <rect x="4" y="2.5" width="22" height="13" rx="1" fill="#030b18"/>
+              <rect x="6.5" y="5.5" width="8" height="1.5" rx="0.75" fill="#818cf8" opacity="0.85"/>
+              <rect x="6.5" y="8.5" width="13" height="1.5" rx="0.75" fill="#22d3ee" opacity="0.65"/>
+              <rect x="6.5" y="11.5" width="5" height="1.5" rx="0.75" fill="#818cf8" opacity="0.5"/>
+              <rect x="10" y="17.5" width="10" height="1.5" rx="0.75" fill="url(#lg-sp-footer)" opacity="0.55"/>
+              <rect x="0" y="19" width="30" height="4" rx="2" fill="url(#lg-sp-footer)" opacity="0.9"/>
+              <rect x="11" y="20" width="8" height="2" rx="1" fill="rgba(255,255,255,0.2)"/>
+            </svg>
+            JART<span class="nav__logo-accent"> Software</span>
+          </a>
+          <p class="footer__tagline-text">State-of-the-art boutique software &amp; AI consulting firm. Building secure, compliant, and high-performance solutions for teams of every size.</p>
+        </div>
+        <div class="footer__col">
+          <h4 class="footer__col-title">Services</h4>
+          <ul class="footer__links" role="list">
+            <li><a href="index.html#services" class="footer__link">Web Design &amp; Development</a></li>
+            <li><a href="index.html#services" class="footer__link">Custom CRM &amp; APIs</a></li>
+            <li><a href="index.html#services" class="footer__link">AI &amp; Automation</a></li>
+            <li><a href="index.html#services" class="footer__link">Technology Consulting</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4 class="footer__col-title">Company</h4>
+          <ul class="footer__links" role="list">
+            <li><a href="index.html#about"   class="footer__link">About Us</a></li>
+            <li><a href="index.html#why-us"  class="footer__link">Why JART</a></li>
+            <li><a href="index.html#contact" class="footer__link">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4 class="footer__col-title">Legal &amp; Compliance</h4>
+          <ul class="footer__links" role="list">
+            <li><a href="privacy-policy.html"   class="footer__link">Privacy Policy</a></li>
+            <li><a href="terms-of-service.html" class="footer__link">Terms of Service</a></li>
+            <li><a href="security-policy.html"  class="footer__link">Security Policy</a></li>
+            <li><a href="gdpr-statement.html"   class="footer__link">GDPR Statement</a></li>
+            <li><a href="cookie-policy.html"    class="footer__link">Cookie Policy</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>&copy; <span id="copyrightYear"></span> JART Software Solutions. All rights reserved.</p>
+        <p class="footer__bottom-tagline">Built with security. Engineered for scale.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
