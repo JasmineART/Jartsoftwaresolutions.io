@@ -114,6 +114,7 @@
       '.why-us__grid',
       '.about__cards',
       '.process__steps',
+      '.faq__list',
     ];
     staggerContainers.forEach(selector => {
       $$(selector + ' .reveal').forEach((el, i) => {
@@ -254,6 +255,26 @@
         submitBtn.classList.remove('is-loading');
       }
     }
+  });
+
+  /* ════ 8. FAQ ACCORDION ════ */
+  $$('.faq__question').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const item = btn.closest('.faq__item');
+      const answer = document.getElementById(btn.getAttribute('aria-controls'));
+      const isOpen = item.classList.contains('is-open');
+      $$('.faq__item.is-open').forEach(openItem => {
+        openItem.classList.remove('is-open');
+        openItem.querySelector('.faq__question').setAttribute('aria-expanded', 'false');
+        const a = document.getElementById(openItem.querySelector('.faq__question').getAttribute('aria-controls'));
+        if (a) a.hidden = true;
+      });
+      if (!isOpen) {
+        item.classList.add('is-open');
+        btn.setAttribute('aria-expanded', 'true');
+        if (answer) answer.hidden = false;
+      }
+    });
   });
 
 })();
