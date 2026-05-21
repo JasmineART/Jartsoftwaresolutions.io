@@ -1124,6 +1124,92 @@ p  { color: var(--text-secondary); }
 
 
 /* ════════════════════════════════════════════════════════════
+   SERVICE AREA
+════════════════════════════════════════════════════════════ */
+.service-area__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.75rem;
+}
+@media (min-width: 1024px) {
+  .service-area__grid { grid-template-columns: 1fr 1fr 1fr; }
+}
+.service-area__region,
+.service-area__cta {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 2rem;
+  transition: border-color var(--transition);
+}
+.service-area__region:hover { border-color: var(--border-hover); }
+.service-area__region-header {
+  display: flex;
+  align-items: center;
+  gap: 0.875rem;
+  margin-bottom: 1.5rem;
+}
+.service-area__region-header h3 { font-size: 1.15rem; margin: 0; }
+.service-area__region-icon {
+  width: 44px; height: 44px;
+  border-radius: 12px;
+  background: var(--indigo-dim);
+  border: 1px solid rgba(99,102,241,0.2);
+  display: flex; align-items: center; justify-content: center;
+  color: var(--indigo-light);
+  flex-shrink: 0;
+}
+.service-area__region-icon--cyan {
+  background: var(--cyan-dim);
+  border-color: rgba(6,182,212,0.2);
+  color: var(--cyan-light);
+}
+.service-area__list {
+  list-style: none;
+  padding: 0; margin: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.55rem 0.5rem;
+}
+.service-area__list li {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  padding-left: 1.1rem;
+  position: relative;
+}
+.service-area__list li::before {
+  content: '';
+  position: absolute;
+  left: 0; top: 50%;
+  transform: translateY(-50%);
+  width: 5px; height: 5px;
+  border-radius: 50%;
+  background: var(--indigo);
+  opacity: 0.7;
+}
+.service-area__cta {
+  background: linear-gradient(135deg, rgba(99,102,241,0.08) 0%, rgba(6,182,212,0.04) 100%);
+  border-color: var(--border-hover);
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+  align-items: flex-start;
+}
+.service-area__cta-icon {
+  width: 52px; height: 52px;
+  border-radius: 14px;
+  background: var(--indigo-dim);
+  border: 1px solid rgba(99,102,241,0.25);
+  display: flex; align-items: center; justify-content: center;
+  color: var(--indigo-light);
+}
+.service-area__cta h3 { font-size: 1.15rem; margin: 0; }
+.service-area__cta p { color: var(--text-secondary); line-height: 1.75; font-size: 0.9375rem; margin: 0; }
+@media (max-width: 640px) {
+  .service-area__grid { grid-template-columns: 1fr; }
+}
+
+/* ════════════════════════════════════════════════════════════
    FAQ
 ════════════════════════════════════════════════════════════ */
 .faq__list { display:flex; flex-direction:column; gap:0.75rem; max-width:860px; margin:0 auto; }
