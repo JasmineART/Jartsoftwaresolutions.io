@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="JART Software Solutions Security Policy — our technical and organizational security controls, compliance frameworks, and vulnerability disclosure program." />
+  <meta name="description" content="JART Software Solutions Security Policy — our technical and organizational security controls, practices, and vulnerability disclosure program." />
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://jartsoftwaresolutions.com/security-policy.html" />
   <link rel="icon" href="favicon.svg" type="image/svg+xml" />
@@ -57,8 +57,7 @@
         <h1 class="legal-hero__title">Security Policy</h1>
         <div class="legal-hero__meta">
           <span><strong>Effective Date:</strong> May 21, 2026</span>
-          <span><strong>Last Updated:</strong> May 21, 2026</span>
-          <span><strong>Framework:</strong> NIST CSF 2.0 / ISO/IEC 27001 Aligned</span>
+          <span><strong>Last Updated:</strong> June 5, 2026</span>
         </div>
       </div>
     </section>
@@ -71,7 +70,7 @@
             <p class="legal-toc__title">Contents</p>
             <ul class="legal-toc__list" role="list">
               <li><a href="#commitment"       class="legal-toc__link">1. Our Commitment</a></li>
-              <li><a href="#framework"        class="legal-toc__link">2. Security Framework</a></li>
+              <li><a href="#framework"        class="legal-toc__link">2. Security Controls</a></li>
               <li><a href="#data-protection"  class="legal-toc__link">3. Data Protection</a></li>
               <li><a href="#access-control"   class="legal-toc__link">4. Access Control</a></li>
               <li><a href="#app-security"     class="legal-toc__link">5. Application Security</a></li>
@@ -81,9 +80,8 @@
               <li><a href="#vendor-security"  class="legal-toc__link">9. Vendor Security</a></li>
               <li><a href="#personnel"        class="legal-toc__link">10. Personnel Security</a></li>
               <li><a href="#data-class"       class="legal-toc__link">11. Data Classification</a></li>
-              <li><a href="#compliance-frameworks" class="legal-toc__link">12. Compliance Frameworks</a></li>
-              <li><a href="#disclosure"       class="legal-toc__link">13. Vulnerability Disclosure</a></li>
-              <li><a href="#contact-security" class="legal-toc__link">14. Security Contact</a></li>
+              <li><a href="#disclosure"       class="legal-toc__link">12. Vulnerability Disclosure</a></li>
+              <li><a href="#contact-security" class="legal-toc__link">13. Security Contact</a></li>
             </ul>
           </aside>
 
@@ -103,13 +101,13 @@
               <li>The operational continuity of our clients' businesses</li>
             </ul>
 
-            <h2 id="framework">2. Security Framework</h2>
-            <p>Our information security management system is aligned with the <strong>NIST Cybersecurity Framework (CSF) 2.0</strong> and references <strong>ISO/IEC 27001:2022</strong> as a guiding standard. We organize security controls across six NIST CSF core functions:</p>
+            <h2 id="framework">2. Security Controls</h2>
+            <p>We organize our security program across six core functions that cover the full lifecycle of a security event — from governance through recovery. These functions guide our practices across both internal operations and client deliverables:</p>
             <div class="legal-table-wrap">
               <table class="legal-table">
                 <thead>
                   <tr>
-                    <th>NIST CSF Function</th>
+                    <th>Function</th>
                     <th>Description</th>
                     <th>Key Activities</th>
                   </tr>
@@ -157,10 +155,10 @@
             <p>Sensitive data stored on our systems and in our delivered solutions is encrypted using <strong>AES-256</strong> encryption. Database encryption (transparent data encryption) is applied to all production databases containing personal or confidential data. Backup data is encrypted with equivalent strength.</p>
 
             <h3>3.3 Key Management</h3>
-            <p>Encryption keys are managed using hardware security modules (HSMs) or equivalent cloud key management services. Keys are rotated on a defined schedule, and access to key material is strictly controlled and audited. Key rotation events are logged and reviewed.</p>
+            <p>Encryption keys are managed through cloud key management services provided by our infrastructure partners. Keys are rotated on a defined schedule, and access to key material is strictly controlled. Key rotation events are logged and reviewed.</p>
 
             <h3>3.4 End-to-End Encryption</h3>
-            <p>For client engagements handling highly sensitive data (healthcare, financial, or similarly regulated data), we implement end-to-end encryption architectures ensuring that data is protected even from the infrastructure layer.</p>
+            <p>For client engagements handling highly sensitive data, we implement end-to-end encryption architectures ensuring that data is protected even from the infrastructure layer.</p>
 
             <h2 id="access-control">4. Access Control</h2>
             <p>Our access control framework is built on three core principles: <strong>least privilege, need-to-know, and zero-trust</strong>.</p>
@@ -189,22 +187,22 @@
 
             <h3>5.1 Secure Development Practices</h3>
             <ul>
-              <li>All developers are trained in secure coding practices, with mandatory annual refreshers</li>
+              <li>All developers follow secure coding practices and stay current with emerging threats and mitigations</li>
               <li>OWASP Top 10 and OWASP Application Security Verification Standard (ASVS) are referenced as baselines for all web applications</li>
-              <li>Threat modeling (using STRIDE) is performed for all new systems and significant architectural changes</li>
-              <li>Code review is mandatory for all changes before merging to main branches; security-critical changes require review by a senior security-aware engineer</li>
+              <li>Threat modeling is performed for new systems and significant architectural changes</li>
+              <li>Code review is required for all changes before merging to main branches; security-critical changes require review by a senior engineer</li>
             </ul>
 
             <h3>5.2 Static and Dynamic Analysis</h3>
             <ul>
-              <li><strong>Static Application Security Testing (SAST)</strong> is integrated into CI/CD pipelines and runs on every code commit</li>
-              <li><strong>Dynamic Application Security Testing (DAST)</strong> is performed on staging environments prior to major releases</li>
+              <li><strong>Static Application Security Testing (SAST)</strong> is integrated into CI/CD pipelines and runs on code commits</li>
+              <li><strong>Dynamic Application Security Testing (DAST)</strong> is performed as part of pre-release security reviews</li>
               <li><strong>Software Composition Analysis (SCA)</strong> continuously monitors all open-source dependencies for known vulnerabilities (CVEs) using industry tooling</li>
               <li>Critical and high-severity findings in automated scans block deployment until resolved</li>
             </ul>
 
             <h3>5.3 Security Testing</h3>
-            <p>All production systems undergo at minimum an annual third-party penetration test. Applications handling sensitive data (healthcare, financial, PII) receive penetration testing prior to production deployment. Findings are remediated within defined SLAs based on severity:</p>
+            <p>Client deliverables handling sensitive data undergo security assessments as part of our delivery quality gates. Internal and client systems are reviewed for vulnerabilities on a risk-appropriate basis. Findings are remediated within defined timelines based on severity:</p>
             <div class="legal-table-wrap">
               <table class="legal-table">
                 <thead>
@@ -225,10 +223,9 @@
 
             <h3>6.2 Network Security</h3>
             <ul>
-              <li>Web Application Firewall (WAF) is deployed for all internet-facing applications to protect against OWASP Top 10 attacks</li>
-              <li>DDoS protection is implemented at the network edge</li>
-              <li>Network traffic is monitored using intrusion detection systems (IDS/IPS)</li>
+              <li>Web Application Firewalls (WAF) and DDoS protection are specified and implemented for client systems where applicable</li>
               <li>All unnecessary ports and services are disabled; network rules follow a default-deny posture</li>
+              <li>We select hosting and infrastructure partners who provide network-layer security controls appropriate to the workload</li>
             </ul>
 
             <h3>6.3 Endpoint Security</h3>
@@ -243,19 +240,19 @@
             <p>Our vulnerability management program follows a continuous cycle of discovery, prioritization, remediation, and verification:</p>
             <ul>
               <li><strong>Asset inventory:</strong> All IT assets are catalogued and classified by risk level</li>
-              <li><strong>Continuous scanning:</strong> Automated vulnerability scans run weekly against all in-scope systems</li>
+              <li><strong>Dependency monitoring:</strong> Open-source dependencies are monitored continuously for known vulnerabilities using automated tooling</li>
               <li><strong>CVE monitoring:</strong> We subscribe to NVD (National Vulnerability Database), CISA KEV (Known Exploited Vulnerabilities), and vendor security advisories</li>
               <li><strong>Patch management:</strong> Critical security patches are evaluated within 24 hours of release; deployment timelines follow the severity-based SLAs above</li>
               <li><strong>Compensating controls:</strong> Where immediate patching is not feasible, risk-accepted compensating controls are documented and reviewed by management</li>
             </ul>
 
             <h2 id="incident-response">8. Incident Response</h2>
-            <p>Our incident response plan follows <strong>NIST SP 800-61 Rev. 2</strong> (Computer Security Incident Handling Guide), covering Preparation, Detection &amp; Analysis, Containment, Eradication, Recovery, and Post-Incident Activity.</p>
+            <p>Our incident response plan covers Preparation, Detection &amp; Analysis, Containment, Eradication, Recovery, and Post-Incident Activity.</p>
 
             <h3>8.1 Response Phases</h3>
             <ul>
               <li><strong>Preparation:</strong> Documented IR plan, defined roles, tested runbooks, communication templates</li>
-              <li><strong>Detection:</strong> 24/7 automated monitoring and alerting; all security events are logged to a centralized SIEM</li>
+              <li><strong>Detection:</strong> Security events are monitored and logged; critical alerts are routed to our team for review</li>
               <li><strong>Containment:</strong> Isolate affected systems within 1 hour of confirmed incident declaration</li>
               <li><strong>Eradication:</strong> Remove threat actor access and root cause; verify clean state before recovery</li>
               <li><strong>Recovery:</strong> Restore systems from verified clean backups; monitor for reinfection</li>
@@ -265,17 +262,16 @@
             <h3>8.2 Breach Notification</h3>
             <p>In the event of a confirmed personal data breach:</p>
             <ul>
-              <li>Affected clients are notified within <strong>24 hours</strong> of confirmation with preliminary details</li>
-              <li>GDPR supervisory authority notification is made within <strong>72 hours</strong> where required (GDPR Art. 33)</li>
-              <li>Affected individuals are notified without undue delay where the breach poses a high risk to their rights and freedoms (GDPR Art. 34)</li>
-              <li>HIPAA-covered incidents follow the HIPAA Breach Notification Rule (45 CFR §§ 164.400-414)</li>
+              <li>Affected clients are notified promptly after confirmation with preliminary details</li>
+              <li>Affected individuals are notified without undue delay where the breach poses material risk to them</li>
+              <li>We cooperate fully with any notification obligations required by applicable law</li>
             </ul>
 
             <h2 id="vendor-security">9. Third-Party and Vendor Security</h2>
             <p>We apply rigorous security requirements to all third-party vendors and sub-processors that access our systems or process data on our behalf:</p>
             <ul>
               <li>All vendors handling personal data sign a <strong>Data Processing Agreement (DPA)</strong> prior to being granted access</li>
-              <li>Critical vendors undergo security questionnaire review aligned with the <strong>Shared Assessments SIG</strong> (Standardized Information Gathering) questionnaire</li>
+              <li>Critical vendors undergo security questionnaire review using a structured assessment process</li>
               <li>Vendors are reviewed annually, and high-risk vendors may be subject to on-site or remote audits</li>
               <li>Vendor access to our systems is granted on a least-privilege basis and monitored</li>
               <li>We maintain a list of authorized sub-processors and notify clients of material changes with adequate notice</li>
@@ -287,7 +283,7 @@
               <li><strong>Security awareness training:</strong> All personnel complete security awareness training upon onboarding and annually thereafter, covering phishing, social engineering, incident reporting, and acceptable use</li>
               <li><strong>Acceptable use policy:</strong> All personnel sign and adhere to our Acceptable Use Policy governing the use of company and client systems</li>
               <li><strong>Confidentiality agreements:</strong> All personnel and contractors sign confidentiality agreements before accessing any client or proprietary information</li>
-              <li><strong>Security champions:</strong> Designated security champions in each project team are responsible for promoting secure development practices</li>
+              <li><strong>Security awareness:</strong> Security-aware practices are built into all project work by our senior engineering team</li>
             </ul>
 
             <h2 id="data-class">11. Data Classification</h2>
@@ -319,38 +315,23 @@
                   <tr>
                     <td><strong>Restricted</strong></td>
                     <td>Highly sensitive; regulatory or legal protection required</td>
-                    <td>PHI (HIPAA), financial account data, security credentials, cryptographic keys</td>
+                    <td>Health-related data, financial account data, security credentials, cryptographic keys</td>
                     <td>Strictest controls; HSM key management; segregated environments; mandatory breach notification procedures</td>
                   </tr>
                 </tbody>
               </table>
             </div>
 
-            <h2 id="compliance-frameworks">12. Compliance Frameworks</h2>
-            <p>Our security program is designed to align with and satisfy the requirements of the following regulatory and industry standards:</p>
-            <div class="framework-badges">
-              <span class="framework-badge framework-badge--blue">NIST CSF 2.0</span>
-              <span class="framework-badge framework-badge--blue">ISO/IEC 27001:2022</span>
-              <span class="framework-badge framework-badge--cyan">GDPR (EU 2016/679)</span>
-              <span class="framework-badge framework-badge--cyan">CCPA / CPRA</span>
-              <span class="framework-badge framework-badge--gold">HIPAA / HITECH</span>
-              <span class="framework-badge framework-badge--gold">SOC 2 Type II (aligned)</span>
-              <span class="framework-badge framework-badge--blue">OWASP ASVS</span>
-              <span class="framework-badge framework-badge--cyan">CIS Controls v8</span>
-              <span class="framework-badge framework-badge--gold">NIST SP 800-53</span>
-            </div>
-            <p>Clients in regulated industries (healthcare, financial services, government contracting) may request documentation of specific control implementations to satisfy their own compliance obligations.</p>
-
-            <h2 id="disclosure">13. Responsible Vulnerability Disclosure</h2>
+            <h2 id="disclosure">12. Responsible Vulnerability Disclosure</h2>
             <p>JART Software Solutions encourages the responsible disclosure of security vulnerabilities affecting our systems or our clients' systems. We are committed to working with security researchers in good faith.</p>
 
-            <h3>13.1 Scope</h3>
+            <h3>12.1 Scope</h3>
             <p>In-scope for disclosure reports: this website (jartsoftwaresolutions.com) and production systems directly operated by JART Software Solutions.</p>
             <p>Out-of-scope: third-party services (GitHub Pages, etc.), denial-of-service attacks, social engineering of JART personnel, and physical security attacks.</p>
 
-            <h3>13.2 Disclosure Process</h3>
+            <h3>12.2 Disclosure Process</h3>
             <ol>
-              <li>Submit your report via email to <a href="mailto:security@jartsoftwaresolutions.com">security@jartsoftwaresolutions.com</a></li>
+              <li>Submit your report via email to <a href="mailto:hello@jartsoftwaresolutions.com">hello@jartsoftwaresolutions.com</a></li>
               <li>Include a clear description of the vulnerability, steps to reproduce, potential impact, and any proof-of-concept</li>
               <li>We will acknowledge receipt within <strong>2 business days</strong></li>
               <li>We will confirm the vulnerability and provide an initial severity assessment within <strong>10 business days</strong></li>
@@ -358,16 +339,15 @@
               <li>We ask that you do not disclose the vulnerability publicly until we have issued a fix, or until <strong>90 days</strong> have elapsed since submission (whichever comes first)</li>
             </ol>
 
-            <h3>13.3 Safe Harbor</h3>
+            <h3>12.3 Safe Harbor</h3>
             <p>We will not pursue legal action against researchers who discover and report vulnerabilities in good faith, provided they do not access or modify data beyond what is necessary to demonstrate the vulnerability, and do not conduct attacks that could harm the availability or integrity of our systems.</p>
 
-            <h2 id="contact-security">14. Security Contact</h2>
+            <h2 id="contact-security">13. Security Contact</h2>
             <div class="legal-contact-box">
               <h3>Report a Security Issue</h3>
-              <p><strong>Email:</strong> <a href="mailto:security@jartsoftwaresolutions.com">security@jartsoftwaresolutions.com</a></p>
+              <p><strong>Email:</strong> <a href="mailto:hello@jartsoftwaresolutions.com">hello@jartsoftwaresolutions.com</a></p>
               <p><strong>For urgent incidents involving client data:</strong> Include "URGENT — DATA INCIDENT" in the subject line for expedited response.</p>
               <p><strong>PGP key:</strong> Available upon request for sensitive disclosures.</p>
-              <p>For general security questions or compliance documentation requests, contact <a href="mailto:hello@jartsoftwaresolutions.com">hello@jartsoftwaresolutions.com</a>.</p>
             </div>
 
           </div>
@@ -422,7 +402,6 @@
             <li><a href="privacy-policy.html"   class="footer__link">Privacy Policy</a></li>
             <li><a href="terms-of-service.html" class="footer__link">Terms of Service</a></li>
             <li><a href="security-policy.html"  class="footer__link">Security Policy</a></li>
-            <li><a href="gdpr-statement.html"   class="footer__link">GDPR Statement</a></li>
             <li><a href="cookie-policy.html"    class="footer__link">Cookie Policy</a></li>
           </ul>
         </div>
