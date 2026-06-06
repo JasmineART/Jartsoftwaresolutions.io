@@ -10,26 +10,25 @@
   <title>California Privacy Rights | JART Software Solutions</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Syne:wght@600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
 
   <header class="header" id="header">
     <nav class="nav container" aria-label="Main navigation">
-      <a href="index.html" class="nav__logo" aria-label="JART Software Solutions home">
-        <svg class="nav__logo-svg" width="30" height="24" viewBox="0 0 30 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-          <defs><linearGradient id="lg-gdpr-nav" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#6366f1"/><stop offset="100%" stop-color="#06b6d4"/></linearGradient></defs>
-          <rect x="2" y="0.5" width="26" height="17" rx="2" fill="url(#lg-gdpr-nav)"/>
-          <rect x="4" y="2.5" width="22" height="13" rx="1" fill="#030b18"/>
-          <rect x="6.5" y="5.5" width="8" height="1.5" rx="0.75" fill="#818cf8" opacity="0.85"/>
-          <rect x="6.5" y="8.5" width="13" height="1.5" rx="0.75" fill="#22d3ee" opacity="0.65"/>
-          <rect x="6.5" y="11.5" width="5" height="1.5" rx="0.75" fill="#818cf8" opacity="0.5"/>
-          <rect x="10" y="17.5" width="10" height="1.5" rx="0.75" fill="url(#lg-gdpr-nav)" opacity="0.55"/>
-          <rect x="0" y="19" width="30" height="4" rx="2" fill="url(#lg-gdpr-nav)" opacity="0.9"/>
-          <rect x="11" y="20" width="8" height="2" rx="1" fill="rgba(255,255,255,0.2)"/>
-        </svg>
-        JART<span class="nav__logo-accent"> Software</span>
+            <a href="index.html" class="nav__logo" aria-label="JART Software Solutions home">
+        <svg class="nav__logo-svg" width="152" height="46" viewBox="0 0 152 46"
+           fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <text x="0" y="28" font-size="30" font-family="'Public Sans',Arial,sans-serif"
+              font-weight="800" fill="#FFFFFE">Jart</text>
+        <!-- cyan arrow underline -->
+        <line x1="0" y1="33" x2="140" y2="33" stroke="#33E7FF" stroke-width="2.2"/>
+        <polygon points="140,29.5 150,33 140,36.5" fill="#33E7FF"/>
+        <text x="0" y="46" font-size="11" font-family="'Public Sans',Arial,sans-serif"
+              font-weight="700" fill="#FFFFFE">Software Solutions</text>
+      </svg>
       </a>
       <ul class="nav__links" id="navLinks" role="list">
         <li><a href="index.html#about"    class="nav__link">About</a></li>
@@ -46,7 +45,7 @@
     </nav>
   </header>
 
-  <main>
+  <main id="main-content">
     <section class="legal-hero">
       <div class="container">
         <nav class="legal-breadcrumb" aria-label="Breadcrumb">
@@ -68,8 +67,12 @@
         <div class="legal-layout">
 
           <aside class="legal-toc" aria-label="Table of contents">
-            <p class="legal-toc__title">Contents</p>
-            <ul class="legal-toc__list" role="list">
+            <p class="legal-toc__title" aria-hidden="true">Contents</p>
+            <button class="legal-toc__toggle" aria-expanded="false" aria-controls="tocList">
+              <span>Contents</span>
+              <svg class="legal-toc__toggle-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <ul class="legal-toc__list" id="tocList" role="list">
               <li><a href="#ca-overview"        class="legal-toc__link">1. Overview</a></li>
               <li><a href="#ca-who-we-are"      class="legal-toc__link">2. Who We Are</a></li>
               <li><a href="#ca-info-collected"  class="legal-toc__link">3. Information We Collect</a></li>
@@ -99,7 +102,7 @@
               <h3>Business Contact</h3>
               <p><strong>JART Software Solutions</strong></p>
               <p><strong>Location:</strong> Sacramento, California</p>
-              <p><strong>Email:</strong> <a href="mailto:hello@jartsoftwaresolutions.com">hello@jartsoftwaresolutions.com</a></p>
+              <p><strong>Email:</strong> <a href="mailto:Help@jartsoftwaresolutions.com">Help@jartsoftwaresolutions.com</a></p>
               <p><strong>Website:</strong> <a href="https://jartsoftwaresolutions.com">jartsoftwaresolutions.com</a></p>
             </div>
 
@@ -107,12 +110,13 @@
             <p>Under the CCPA, "personal information" means information that identifies, relates to, describes, or could reasonably be linked to a particular California resident or household. In the preceding 12 months, we have collected the following categories of personal information:</p>
             <div class="legal-table-wrap">
               <table class="legal-table">
+                <caption class="sr-only">Categories of personal information collected, examples, whether collected, and source</caption>
                 <thead>
                   <tr>
-                    <th>Category</th>
-                    <th>Examples</th>
-                    <th>Collected?</th>
-                    <th>Source</th>
+                    <th scope="col">Category</th>
+                    <th scope="col">Examples</th>
+                    <th scope="col">Collected?</th>
+                    <th scope="col">Source</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -215,7 +219,7 @@
             <p>To submit a verifiable California consumer rights request, contact us using the information below. We will acknowledge your request within <strong>10 business days</strong> and respond within <strong>45 days</strong> of receipt. If we require additional time (up to 90 days), we will notify you of the extension and the reason within the initial 45-day period.</p>
             <div class="legal-contact-box">
               <h3>Submit a Privacy Request</h3>
-              <p><strong>Email:</strong> <a href="mailto:hello@jartsoftwaresolutions.com">hello@jartsoftwaresolutions.com</a></p>
+              <p><strong>Email:</strong> <a href="mailto:Help@jartsoftwaresolutions.com">Help@jartsoftwaresolutions.com</a></p>
               <p><strong>Subject line:</strong> "CCPA Request — [Right you are exercising] — [Your Name]"</p>
               <p><strong>Include:</strong> Your full name, email address used in dealings with us, a description of your request, and sufficient information for us to verify your identity.</p>
             </div>
@@ -232,7 +236,7 @@
             <div class="legal-contact-box">
               <h3>Privacy Inquiries &amp; CCPA Requests</h3>
               <p>For questions about this notice or to exercise your California privacy rights:</p>
-              <p><strong>Email:</strong> <a href="mailto:hello@jartsoftwaresolutions.com">hello@jartsoftwaresolutions.com</a></p>
+              <p><strong>Email:</strong> <a href="mailto:Help@jartsoftwaresolutions.com">Help@jartsoftwaresolutions.com</a></p>
               <p><strong>Subject line:</strong> "CCPA Request — [Your Name]"</p>
               <p>We aim to acknowledge all requests within <strong>10 business days</strong> and respond fully within <strong>45 days</strong>.</p>
             </div>
@@ -248,18 +252,16 @@
       <div class="footer__grid">
         <div class="footer__brand">
           <a href="index.html" class="nav__logo footer__logo" aria-label="JART Software Solutions home">
-            <svg class="nav__logo-svg" width="30" height="24" viewBox="0 0 30 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-              <defs><linearGradient id="lg-gdpr-footer" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#6366f1"/><stop offset="100%" stop-color="#06b6d4"/></linearGradient></defs>
-              <rect x="2" y="0.5" width="26" height="17" rx="2" fill="url(#lg-gdpr-footer)"/>
-              <rect x="4" y="2.5" width="22" height="13" rx="1" fill="#030b18"/>
-              <rect x="6.5" y="5.5" width="8" height="1.5" rx="0.75" fill="#818cf8" opacity="0.85"/>
-              <rect x="6.5" y="8.5" width="13" height="1.5" rx="0.75" fill="#22d3ee" opacity="0.65"/>
-              <rect x="6.5" y="11.5" width="5" height="1.5" rx="0.75" fill="#818cf8" opacity="0.5"/>
-              <rect x="10" y="17.5" width="10" height="1.5" rx="0.75" fill="url(#lg-gdpr-footer)" opacity="0.55"/>
-              <rect x="0" y="19" width="30" height="4" rx="2" fill="url(#lg-gdpr-footer)" opacity="0.9"/>
-              <rect x="11" y="20" width="8" height="2" rx="1" fill="rgba(255,255,255,0.2)"/>
-            </svg>
-            JART<span class="nav__logo-accent"> Software</span>
+            <svg class="footer__logo-svg" width="190" height="58" viewBox="0 0 190 58"
+              fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <text x="0" y="36" font-size="38" font-family="'Public Sans',Arial,sans-serif"
+                  font-weight="800" fill="#FFFFFE">Jart</text>
+            <!-- cyan arrow underline -->
+            <line x1="0" y1="42" x2="176" y2="42" stroke="#33E7FF" stroke-width="2.5"/>
+            <polygon points="176,38 188,42 176,46" fill="#33E7FF"/>
+            <text x="0" y="58" font-size="13.5" font-family="'Public Sans',Arial,sans-serif"
+                  font-weight="700" fill="#FFFFFE">Software Solutions</text>
+          </svg>
           </a>
           <p class="footer__tagline-text">State-of-the-art boutique software &amp; AI consulting firm. Building secure, compliant, and high-performance solutions for teams of every size.</p>
         </div>
@@ -300,6 +302,10 @@
     </div>
   </footer>
 
-  <script src="js/main.js"></script>
+  <button class="back-to-top" aria-label="Back to top" aria-hidden="true">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="18 15 12 9 6 15"/></svg>
+  </button>
+
+  <script src="js/main.js" defer></script>
 </body>
 </html>

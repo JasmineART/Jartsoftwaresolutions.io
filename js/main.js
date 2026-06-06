@@ -32,6 +32,7 @@
   ════════════════════════════════════════════════════════ */
   const navToggle = $('#navToggle');
   const navLinks  = $('#navLinks');
+  const navOverlay = $('#navOverlay');
 
   if (navToggle && navLinks) {
     let isOpen = false;
@@ -41,6 +42,7 @@
       navLinks.classList.add('is-open');
       navToggle.setAttribute('aria-expanded', 'true');
       document.body.style.overflow = 'hidden';
+      if (navOverlay) { navOverlay.classList.add('is-open'); navOverlay.removeAttribute('aria-hidden'); }
     };
 
     const closeNav = () => {
@@ -48,6 +50,7 @@
       navLinks.classList.remove('is-open');
       navToggle.setAttribute('aria-expanded', 'false');
       document.body.style.overflow = '';
+      if (navOverlay) { navOverlay.classList.remove('is-open'); navOverlay.setAttribute('aria-hidden', 'true'); }
     };
 
     navToggle.addEventListener('click', () => {
@@ -64,9 +67,10 @@
       if (e.key === 'Escape' && isOpen) closeNav();
     });
 
-    // Close on outside click
+    // Close on outside click or overlay click
+    if (navOverlay) navOverlay.addEventListener('click', closeNav);
     document.addEventListener('click', e => {
-      if (isOpen && !header.contains(e.target)) closeNav();
+      if (isOpen && !header.contains(e.target) && e.target !== navOverlay) closeNav();
     });
   }
 
@@ -274,5 +278,71 @@
       }
     });
   });
+
+  /* ════════════════════════════════════════════════════════
+     9. LEGAL PAGE — TOC MOBILE ACCORDION
+  ════════════════════════════════════════════════════════ */
+  const tocToggle = $('.legal-toc__toggle');
+  if (tocToggle) {
+    tocToggle.addEventListener('click', function () {
+      const aside = tocToggle.closest('.legal-toc');
+      const isOpen = aside.classList.contains('is-open');
+      aside.classList.toggle('is-open', !isOpen);
+      tocToggle.setAttribute('aria-expanded', String(!isOpen));
+    });
+  }
+
+  /* ════════════════════════════════════════════════════════
+     10. LEGAL PAGE — TOC SCROLLSPY
+  ════════════════════════════════════════════════════════ */
+  function initTocScrollspy() {
+    const tocLinks = $$('.legal-toc__link');
+    if (!tocLinks.length) return;
+    const headings = $$('.legal-content h2[id]');
+    if (!headings.length) return;
+
+    if (!('IntersectionObserver' in window)) return;
+
+    const spyObserver = new IntersectionObserver(
+      function (entries) {
+        entries.forEach(function (entry) {
+          if (!entry.isIntersecting) return;
+          const id = entry.target.getAttribute('id');
+          const activeLink = document.querySelector('.legal-toc__link[href="#' + id + '"]');
+          if (!activeLink) return;
+          tocLinks.forEach(function (l) { l.classList.remove('is-active'); });
+          activeLink.classList.add('is-active');
+        });
+      },
+      { rootMargin: '-80px 0px -65% 0px', threshold: 0 }
+    );
+
+    headings.forEach(function (h) { spyObserver.observe(h); });
+  }
+
+  initTocScrollspy();
+
+  /* ════════════════════════════════════════════════════════
+     11. LEGAL PAGE — BACK TO TOP
+  ════════════════════════════════════════════════════════ */
+  function initBackToTop() {
+    const btn = $('.back-to-top');
+    if (!btn) return;
+
+    function updateVisibility() {
+      const isVisible = window.scrollY > 300;
+      btn.classList.toggle('is-visible', isVisible);
+      btn.setAttribute('aria-hidden', String(!isVisible));
+    }
+
+    window.addEventListener('scroll', updateVisibility, { passive: true });
+    updateVisibility();
+
+    btn.addEventListener('click', function () {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  }
+
+  initBackToTop();
 
 })();
